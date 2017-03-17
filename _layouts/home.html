@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+  <article class="article-excerpt">
+    <header class="article-header">
+      <h1 class="article-title" itemprop="name headline">
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          {{ post.title | escape }}
+        </a>
+      </h1>
+      <p class="article-date">
+        <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{ post.date | date: "%B %-d, %Y" }}
+        </time>
+      </p>
+    </header>
+    <div class="article-content">
+      {{ post.excerpt }}
+    </div>
+  </article>
+{% endfor %}

@@ -1,0 +1,26 @@
+<header class="site-header">
+  <h1><a href="{{ '/' | relative_url}}">{{ site.title | escape }}</a></h1>
+  <ul>
+    <!-- <li>
+      <a href="{{ '/archives.html' | relative_url}}">Archives</a>
+    </li>
+    <li>
+      <a href="{{ '/tags.html' | relative_url}}">Tags</a>
+    </li> -->
+    {% for social in site.social %}
+      <li>
+      {% if social.name == 'github' %}
+        <a href="{{ social.link }}" target="_blank">
+          <img alt="My GitHub profile" title="My GitHub profile" src="{{ '/images/github_24.png' | relative_url }}" />
+        </a>
+      {% elsif social.name == 'google-plus' %}
+        <a href="{{ social.link }}" target="_blank">
+          <img alt="My Google+ profile" title="My Google+ profile" src="{{ '/images/google-plus_24.png' | relative_url }}" />
+        </a>
+      {% else %}
+        <a href="{{ link }}" target="_blank">{{ name }}</a>
+      {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</header>
