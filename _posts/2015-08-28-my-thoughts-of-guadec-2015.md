@@ -1,4 +1,5 @@
 ---
+id: tag:blogger.com,1999:blog-3548190650010882414.post-6761489518775831645
 title: My thoughts of GUADEC 2015
 tags: gnome guadec guadec2015
 ---
